@@ -1,0 +1,25 @@
+{
+    "author": "Cristian Carlesso (http://github.com/kentaromiura)",
+    "name": "Monad",
+    "description": "Monad implementation in plain old javascript",
+    "version": "0.0.1",
+    "main": "Source/Monad",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/kentaromiura/Monad.git"
+    },
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "expect.js": "0.1",
+        "mocha": "1.0",
+        "wrapup": "0.9"
+    },
+    "optionalDependencies": {},
+    "scripts": {
+        "test": "./node_modules/mocha/bin/mocha Tests/Monad.js"
+    },
+    "engines": {
+        "node": "*"
+    }
+}
