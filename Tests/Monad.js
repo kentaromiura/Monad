@@ -1,5 +1,6 @@
-var expect = require('expect.js');
-var Monad  = require('../Source/Monad.js');
+var expect = require('expect.js')
+var Monad  = require('../Source/Monad.js')
+var Maybe  = require('../Source/Monad.Maybe.js')
 
 describe('Monad.js', function(){
 
@@ -44,15 +45,15 @@ describe('Monad.js', function(){
     })
 
 
-    it('should return the monad itself if no value are passed to the monad', function(){
+    it('should return the maybe monad itself if no value are passed to the monad', function(){
 
         var undefined,
-            monad = new Monad(null)
+            monad = new Maybe(null)
 
         expect(monad.bind(add1)).to.be(monad)
         expect(monad.bind(add1).value()).to.be(null)
 
-        var umonad = new Monad(undefined)
+        var umonad = new Maybe(undefined)
         expect(umonad.bind(add1)).to.be(umonad)
         expect(umonad).to.not.be(monad)
         expect(umonad.bind(add1).value()).to.be(undefined)

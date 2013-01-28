@@ -12,7 +12,7 @@ function Monad(value){
 
 Monad.prototype.bind = function(f){
 	var value = this.value()
-	if (f === Monad || value === null || value === undefined) return this
+	if (f === Monad) return this
 	if (typeof f === 'function') return new Monad(f(value))
 	return this
 }
